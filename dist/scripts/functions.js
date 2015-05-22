@@ -80,6 +80,17 @@ function countLetters (string) {
 		array.push(' ' + prop + ':' + obj[prop]);
 	}
 	return array;
+	/*  var letterCount = {};
+		for (var i=0; i<inputString.length; i++) {
+			var currentLetter = inputString.chatAt(i);
+			if (!leterCount.hasOwnProperty(currentLetter)) {
+				letterCount[currentLetter] = 1;
+			} else {
+				leterCount[currentLetter]++;
+			}	
+			}
+		}
+		*/
 }
 
 function maze () {
@@ -96,13 +107,8 @@ function maze () {
 function table (array, year, make, model, color) {
 	var result = [];
 	for (var i = 0; i < array.length; i++) {
-		if (year == array[i].year) {
-			result.push(array[i]);
-		} else if (make == array[i].make) {
-			result.push(array[i]);
-		} else if (model == array[i].model) {
-			result.push(array[i]);
-		} else if (color == array[i].color) {
+		if (year == array[i].year || make == array[i].make || 
+			model == array[i].model || color == array[i].color) {
 			result.push(array[i]);
 		}
 	}
